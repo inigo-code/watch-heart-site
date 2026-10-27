@@ -1301,11 +1301,23 @@ main {
   text-underline-offset: 3px;
 }
 
-.doc-mark {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 20px;
-  border-radius: 14px;
+/* The app and the store it comes from, side by side. */
+.doc-marks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.doc-marks img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+}
+
+.doc-marks span {
+  font: 400 32px/1 var(--display);
+  color: var(--muted-on-paper);
 }
 
 .fdroid-add {
