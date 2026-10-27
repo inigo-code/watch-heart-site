@@ -40,7 +40,7 @@
         </p>
       </div>
       <div class="ticket-stub" data-reveal>
-        <figure class="plate"><img src="assets/screens/diary.webp" width="824" height="1784" alt="The Diary: October 2026 as a reel of film, each viewing a ticket stub with poster, stars and a heart"></figure>
+        <figure class="plate"><img src="assets/screens/diary.webp" width="824" height="1784" fetchpriority="high" alt="The Diary: October 2026 as a reel of film, each viewing a ticket stub with poster, stars and a heart"></figure>
         <figure class="plate plate-raised"><img src="assets/stories/strip-marquee.webp" width="540" height="960" alt="An October recap story: nine posters in a strip of film, 15 hours of screen time, 4.4 stars on average"></figure>
         <figure class="plate"><img src="assets/screens/pick.webp" width="824" height="1784" alt="Tonight's feature: the watchlist picks Nosferatu, recommended by Sam"></figure>
       </div>
@@ -50,17 +50,17 @@
   <!-- Every viewing, a ticket -->
   <section id="diary" class="showcase" aria-labelledby="diary-title">
     <div class="showcase-plate" data-reveal>
-      <img id="showcase-img" src="assets/screens/diary.webp" width="824" height="1784" alt="The Diary as ticket stubs">
+      <div class="device"><img id="showcase-img" src="assets/screens/diary.webp" width="824" height="1784" alt="The Diary as ticket stubs" loading="lazy" decoding="async"></div>
     </div>
     <div class="showcase-text">
-      <div class="tabs" role="tablist" aria-label="Ways to see your diary">
-        <button role="tab" aria-selected="true" data-img="assets/screens/diary.webp" data-alt="The Diary as ticket stubs">Tickets</button>
-        <button role="tab" aria-selected="false" data-img="assets/screens/wall.webp" data-alt="The Diary as a poster wall">Poster wall</button>
-        <button role="tab" aria-selected="false" data-img="assets/screens/paper.webp" data-alt="The Diary in the light Paper look with the Velvet accent">Paper</button>
-      </div>
       <div class="showcase-copy" data-reveal>
         <h2 id="diary-title">Every viewing, a ticket</h2>
         <p>Log what you watched and when, with half-star ratings, a heart, rewatches and a review. Each month becomes a reel of film, numbered like a projectionist would: October is reel 10.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Ways to see your diary">
+        <button role="tab" aria-selected="true" data-img="assets/screens/diary.webp" data-alt="The Diary as ticket stubs">Tickets</button>
+        <button role="tab" aria-selected="false" data-img="assets/screens/wall.webp" data-alt="The Diary as a poster wall">Poster wall</button>
+        <button role="tab" aria-selected="false" data-img="assets/screens/paper.webp" data-alt="The Diary in the light Paper look with the Velvet accent">Paper look</button>
       </div>
       <div class="cells">
         <a class="cell cell-ink" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Download for Android</a>
@@ -69,29 +69,34 @@
     </div>
   </section>
 
-  <!-- Made for movie nights: sheets that stack like tabbed folders -->
-  <section class="sheets" aria-labelledby="sheets-title">
-    <h2 id="sheets-title" class="sheets-title" data-reveal>Made for movie nights</h2>
-    <article class="sheet sheet-gold">
+  <!-- Made for movie nights: four colour fields, each with its words on a dark ticket and the screen in a phone -->
+  <section class="features" aria-labelledby="features-title">
+    <div class="features-head" data-reveal>
+      <h2 id="features-title">Made for movie nights</h2>
+      <p>Everything you need between the opening titles and the end credits, and nothing you don’t.</p>
+    </div>
+    <div class="feature-grid">
+    <article class="feature feature-gold" data-reveal>
       <h3>Find anything you watched</h3>
-      <p>Films, series and anime in one search, with what’s trending this week before you type. Share a link from IMDb, Letterboxd, TMDB or Chrome and it opens ready to log.</p>
-      <img src="assets/screens/find.webp" width="824" height="1784" alt="Find: anime trending this week, from The Apothecary Diaries to Bleach" loading="lazy">
+      <p class="feature-note">Films, series and anime in one search, with what’s trending this week before you type. Share a link from IMDb, Letterboxd, TMDB or Chrome and it opens ready to log.</p>
+      <div class="feature-shot"><div class="device"><img src="assets/screens/find.webp" width="824" height="1784" alt="Find: anime trending this week, from The Apothecary Diaries to Bleach" loading="lazy" decoding="async"></div></div>
     </article>
-    <article class="sheet sheet-velvet">
+    <article class="feature feature-velvet" data-reveal>
       <h3>Half stars, real reviews</h3>
-      <p>Slide across the stars to rate, heart the ones you love, mark rewatches, note the season and episodes, and hide spoilers behind a tap.</p>
-      <img src="assets/screens/log.webp" width="824" height="1784" alt="Logging Frieren: watched on a date, five stars, loved, season 1 episodes 1 to 10" loading="lazy">
+      <p class="feature-note">Slide across the stars to rate, heart the ones you love, mark rewatches, note the season and episodes, and hide spoilers behind a tap.</p>
+      <div class="feature-shot"><div class="device"><img src="assets/screens/entry.webp" width="824" height="1784" alt="Past Lives in the diary: watched Saturday, four and a half stars, loved, with a one-line review" loading="lazy" decoding="async"></div></div>
     </article>
-    <article class="sheet sheet-neon">
+    <article class="feature feature-neon" data-reveal>
       <h3>Can’t decide? Spin the reel</h3>
-      <p>Bookmark what you want to watch. When the evening comes and nobody can choose, Pick for me shows tonight’s feature. Logging it takes it off the list.</p>
-      <img src="assets/screens/watchlist.webp" width="824" height="1784" alt="Up Next: the watchlist as a wall of posters with a Pick for me button" loading="lazy">
+      <p class="feature-note">Bookmark what you want to watch. When nobody can choose, Pick for me shows tonight’s feature. Logging it takes it off the list.</p>
+      <div class="feature-shot"><div class="device"><img src="assets/screens/watchlist.webp" width="824" height="1784" alt="Up Next: the watchlist as a wall of posters with a Pick for me button" loading="lazy" decoding="async"></div></div>
     </article>
-    <article class="sheet sheet-paper">
+    <article class="feature feature-paper" data-reveal>
       <h3>Yours, and only yours</h3>
-      <p>Everything stays on your phone. Lock the app with your fingerprint, back up to a file, and sign in only if you want your diary on another device too.</p>
-      <img src="assets/screens/entry.webp" width="824" height="1784" alt="Past Lives in the diary: watched Saturday, four and a half stars, loved, with a review" loading="lazy">
+      <p class="feature-note">Everything stays on your phone. Pick the dark Projector or light Paper look, lock the app with your fingerprint, and sign in only if you want your diary on another device.</p>
+      <div class="feature-shot"><div class="device"><img src="assets/screens/paper.webp" width="824" height="1784" alt="The Diary in the light Paper look: October as a reel of film, each viewing a ticket stub" loading="lazy" decoding="async"></div></div>
     </article>
+    </div>
   </section>
 
   <!-- Every month, a story: the live thing -->
@@ -106,21 +111,21 @@
       </div>
     </div>
     <ul class="tiles" id="story-tiles">
-      <li data-reveal class="tile pair-1"><img data-palette="marquee" src="assets/stories/strip-marquee.webp" width="540" height="960" alt="October story in the Marquee palette" loading="lazy">
+      <li data-reveal class="tile pair-1"><img data-palette="marquee" src="assets/stories/strip-marquee.webp" width="540" height="960" alt="October story in the Marquee palette" loading="lazy" decoding="async">
         <div class="tag"><p><span>Marquee</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
-      <li data-reveal class="tile pair-2"><img data-palette="velvet" src="assets/stories/strip-velvet.webp" width="540" height="960" alt="October story in the Velvet palette" loading="lazy">
+      <li data-reveal class="tile pair-2"><img data-palette="velvet" src="assets/stories/strip-velvet.webp" width="540" height="960" alt="October story in the Velvet palette" loading="lazy" decoding="async">
         <div class="tag"><p><span>Velvet</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
-      <li data-reveal class="tile pair-3"><img data-palette="neon" src="assets/stories/strip-neon.webp" width="540" height="960" alt="October story in the Neon palette" loading="lazy">
+      <li data-reveal class="tile pair-3"><img data-palette="neon" src="assets/stories/strip-neon.webp" width="540" height="960" alt="October story in the Neon palette" loading="lazy" decoding="async">
         <div class="tag"><p><span>Neon</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
-      <li data-reveal class="tile pair-4"><img data-palette="sakura" src="assets/stories/strip-sakura.webp" width="540" height="960" alt="October story in the Sakura palette" loading="lazy">
+      <li data-reveal class="tile pair-4"><img data-palette="sakura" src="assets/stories/strip-sakura.webp" width="540" height="960" alt="October story in the Sakura palette" loading="lazy" decoding="async">
         <div class="tag"><p><span>Sakura</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
-      <li data-reveal class="tile pair-2"><img data-palette="noir" src="assets/stories/strip-noir.webp" width="540" height="960" alt="October story in the Noir palette" loading="lazy">
+      <li data-reveal class="tile pair-2"><img data-palette="noir" src="assets/stories/strip-noir.webp" width="540" height="960" alt="October story in the Noir palette" loading="lazy" decoding="async">
         <div class="tag"><p><span>Noir</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
-      <li data-reveal class="tile pair-1"><img data-palette="paper" src="assets/stories/strip-paper.webp" width="540" height="960" alt="October story in the Paper palette" loading="lazy">
+      <li data-reveal class="tile pair-1"><img data-palette="paper" src="assets/stories/strip-paper.webp" width="540" height="960" alt="October story in the Paper palette" loading="lazy" decoding="async">
         <div class="tag"><p><span>Paper</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
-      <li data-reveal class="tile pair-4"><img src="assets/screens/card.webp" width="824" height="1784" alt="A single review as a story card: Spirited Away, rewatched, five stars" loading="lazy">
+      <li data-reveal class="tile pair-4"><img src="assets/screens/card.webp" width="824" height="1784" alt="A single review as a story card: Spirited Away, rewatched, five stars" loading="lazy" decoding="async">
         <div class="tag"><p><span>Story card</span><span>One review</span><span>5 stars</span><span>Velvet</span></p><p><span>17 Oct</span><span>Just watched</span></p></div></li>
-      <li data-reveal class="tile pair-3"><img src="assets/screens/recap.webp" width="824" height="1784" alt="The Recap tab: choose a month, a layout and a palette, then share or save" loading="lazy">
+      <li data-reveal class="tile pair-3"><img src="assets/screens/recap.webp" width="824" height="1784" alt="The Recap tab: choose a month, a layout and a palette, then share or save" loading="lazy" decoding="async">
         <div class="tag"><p><span>Recap tab</span><span>Month or year</span><span>Share</span><span>Save</span></p><p><span>Any month</span><span>2026 wrapped</span></p></div></li>
     </ul>
   </section>
@@ -130,7 +135,7 @@
     <div class="programme-side" data-reveal>
       <h2 id="import-title">Bring your history</h2>
       <p>Pick the file your old app exported, as it comes. Watch Heart reads it, adds what’s new and finds every poster on its own.</p>
-      <img src="assets/screens/import.webp" width="824" height="1784" alt="The Import screen: Letterboxd and IMDb files found, ready to add" loading="lazy">
+      <div class="programme-shot"><div class="device"><img src="assets/screens/import.webp" width="824" height="1784" alt="The Import screen: choose the files your old app exported, and posters are found automatically" loading="lazy" decoding="async"></div></div>
     </div>
     <div class="menu-sheet" data-reveal>
       <h3>Tonight’s programme</h3>
