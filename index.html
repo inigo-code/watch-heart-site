@@ -143,25 +143,25 @@
       <div class="menu-group">
         <h4>Film diaries</h4>
         <dl>
-          <div><dt>Letterboxd<small>The .zip from Settings → Data</small></dt><dd>Diary, ratings, reviews, likes</dd></div>
-          <div><dt>IMDb<small>Ratings and watchlist exports</small></dt><dd>Ratings, watchlist</dd></div>
-          <div><dt>Trakt<small>Data export, exact matches</small></dt><dd>History, ratings</dd></div>
-          <div><dt>Moviebase<small>Synced through Trakt</small></dt><dd>History, ratings</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/letterboxd.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>Letterboxd<small>The .zip from Settings → Data</small></dt><dd>Diary, ratings, reviews, likes</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/imdb.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>IMDb<small>Ratings and watchlist exports</small></dt><dd>Ratings, watchlist</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/trakt.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>Trakt<small>Data export, exact matches</small></dt><dd>History, ratings</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/moviebase.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>Moviebase<small>Synced through Trakt</small></dt><dd>History, ratings</dd></div>
         </dl>
       </div>
       <div class="menu-group">
         <h4>Anime</h4>
         <dl>
-          <div><dt>MyAnimeList<small>The anime list export</small></dt><dd>Completed, watching</dd></div>
-          <div><dt>AniList<small>In MyAnimeList’s format</small></dt><dd>Completed, watching</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/myanimelist.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>MyAnimeList<small>The anime list export</small></dt><dd>Completed, watching</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/anilist.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>AniList<small>In MyAnimeList’s format</small></dt><dd>Completed, watching</dd></div>
         </dl>
       </div>
       <div class="menu-group">
         <h4>Streaming and trackers</h4>
         <dl>
-          <div><dt>Netflix<small>Viewing activity download</small></dt><dd>Viewing history</dd></div>
-          <div><dt>Refract<small>Settings → Export Data</small></dt><dd>Watched, reviews</dd></div>
-          <div><dt>Serializd, TV Time<small>Any CSV or JSON export</small></dt><dd>Titles, dates</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/netflix.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>Netflix<small>Viewing activity download</small></dt><dd>Viewing history</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/refract.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>Refract<small>Settings → Export Data</small></dt><dd>Watched, reviews</dd></div>
+          <div><span class="menu-logo"><img src="assets/logos/serializd.png" width="32" height="32" alt="" loading="lazy" decoding="async"><img src="assets/logos/tvtime.png" width="32" height="32" alt="" loading="lazy" decoding="async"></span><dt>Serializd, TV Time<small>Any CSV or JSON export</small></dt><dd>Titles, dates</dd></div>
         </dl>
       </div>
       <p class="menu-close">Posters arrive by themselves.<br>Import again any time: nothing doubles.</p>
@@ -194,7 +194,8 @@
       <p><b>How do I post a story to Instagram?</b> Open Recap, choose the month and a look, tap Share to story, then pick Instagram and Story. You can save it to your photos too.</p>
       <p><b>Can I bring my Letterboxd history?</b> Yes, and IMDb, Trakt, MyAnimeList, Netflix, Refract and more. See the programme above.</p>
       <p><b>Can I leave and take my diary with me?</b> Any time: export a full backup, a spreadsheet, or a file Letterboxd can import.</p>
-      <p><b>Is it on Google Play or iPhone?</b> It’s an Android app, installed from the APK here for now. Google Play is next.</p>
+      <p><b>Is it on Google Play or iPhone?</b> It’s an Android app. Install the APK here, or <a href="fdroid.html">get it with F-Droid</a>. Google Play is next.</p>
+      <p><b>How do updates arrive?</b> Smaller improvements arrive inside the app by themselves. For new versions, F-Droid updates it like any other app; with the APK, download the new one over the old and your diary stays.</p>
       <p><b>How do I delete my account?</b> In the app: Settings, tap your email under Account, then Delete account. There’s also a <a href="delete-account.html">page for it</a>.</p>
     </div>
   </section>
@@ -203,7 +204,11 @@
   <section class="first-step" aria-labelledby="cta-title">
     <div class="first-step-copy" data-reveal>
       <h2 id="cta-title">Lights down.<br>Log it.</h2>
-      <p>Install the APK, open Watch Heart and log the last thing you watched. Your first reel starts there.</p>
+      <p>Install Watch Heart, open it and log the last thing you watched. Your first reel starts there.</p>
+      <p class="install-ways">
+        <a class="install-apk" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Download APK</a>
+        <a class="install-fdroid" href="fdroid.html"><img src="assets/logos/fdroid.png" width="28" height="28" alt="">Get it with F-Droid</a>
+      </p>
     </div>
     <form class="log-card" data-ui id="log-card" action="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk" method="get" data-reveal>
       <p class="log-title">What did you watch?</p>
@@ -220,7 +225,7 @@
         <button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
         <button type="button" role="radio" aria-checked="true" aria-label="5 stars" data-v="5"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
       </div>
-      <a class="log-button" id="log-button" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Get Watch Heart to log <span id="log-name">Past Lives</span></a>
+      <a class="log-button" id="log-button" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Get Watch Heart to log&nbsp;<span id="log-name">Past Lives</span></a>
     </form>
   </section>
 
@@ -232,12 +237,12 @@
     <span style="--h:92%" class="b-gold">W</span><span style="--h:74%" class="b-paper">A</span><span style="--h:100%" class="b-velvet">T</span><span style="--h:66%" class="b-neon">C</span><span style="--h:86%" class="b-sakura">H</span><span style="--h:58%" class="b-ground">&nbsp;</span><span style="--h:100%" class="b-gold">H</span><span style="--h:80%" class="b-velvet">E</span><span style="--h:70%" class="b-paper">A</span><span style="--h:94%" class="b-sakura">R</span><span style="--h:76%" class="b-neon">T</span>
   </div>
   <div class="back-links">
-    <div><h2>App</h2><a href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Download APK</a><a href="https://github.com/inigo-code/watch-heart">Source on GitHub</a></div>
+    <div><h2>App</h2><a href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Download APK</a><a href="fdroid.html">Get it with F-Droid</a><a href="https://github.com/inigo-code/watch-heart">Source on GitHub</a></div>
     <div><h2>Your data</h2><a href="privacy.html">Privacy policy</a><a href="delete-account.html">Delete your account</a></div>
     <div><h2>Contact</h2><a href="mailto:inigo@tosstheworld.org?subject=Watch%20Heart">inigo@tosstheworld.org</a><a href="https://github.com/inigo-code">github.com/inigo-code</a></div>
     <div class="credits">
       <img src="assets/tmdb-logo.png" width="110" height="14" alt="TMDB">
-      <p>Watch Heart uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB. Series data from TVmaze, CC BY-SA. Posters belong to their owners.</p>
+      <p>Watch Heart uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB. Series data from TVmaze, CC BY-SA. Posters belong to their owners. App logos from Simple Icons (CC0); Watch Heart isn’t affiliated with those apps.</p>
     </div>
   </div>
   <div class="back-last">

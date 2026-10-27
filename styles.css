@@ -756,10 +756,41 @@ main {
 
 .menu-group dl div {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
+  align-items: center;
+  gap: 14px;
   padding: 8px 0;
+}
+
+/* Each app's logo tile; a pair overlaps a little, ringed in the paper's colour. */
+.menu-logo {
+  flex: none;
+  display: flex;
+  width: 50px;
+}
+
+.menu-logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.menu-logo img:first-child:not(:last-child) {
+  width: 26px;
+  height: 26px;
+  margin-top: 3px;
+  border-radius: 7px;
+}
+
+.menu-logo img + img {
+  width: 30px;
+  height: 30px;
+  margin-left: -6px;
+  border: 2px solid var(--paper);
+  border-radius: 8px;
+}
+
+.menu-group dt {
+  flex: 1;
 }
 
 .menu-group dt {
@@ -909,6 +940,53 @@ main {
 .first-step-copy p {
   margin-top: 24px;
   max-width: 36ch;
+}
+
+/* Two ways to install, side by side on the gold. */
+.first-step-copy .install-ways {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: none;
+  margin-top: 32px;
+}
+
+.install-apk,
+.install-fdroid {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms var(--ease), filter 160ms var(--ease);
+}
+
+.install-apk {
+  background: var(--ground);
+  color: var(--ink-on-ground);
+}
+
+.install-fdroid {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.install-fdroid img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+
+.install-apk:hover,
+.install-fdroid:hover {
+  filter: brightness(1.1);
+}
+
+.install-apk:active,
+.install-fdroid:active {
+  transform: scale(0.98);
 }
 
 /* A piece of the app at its true size: the log card. */
@@ -1223,6 +1301,30 @@ main {
   text-underline-offset: 3px;
 }
 
+.doc-mark {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+}
+
+.fdroid-add {
+  margin-top: 16px;
+}
+
+.fdroid-qr {
+  width: min(300px, 100%);
+  height: auto;
+  margin-top: 16px;
+}
+
+.doc-body .fdroid-code {
+  padding: 10px 12px;
+  background: #e6ddcc;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
 .bar-links a[aria-current='page'] {
   color: var(--gold);
 }
@@ -1331,6 +1433,10 @@ main {
   .first-step-copy p {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .first-step-copy .install-ways {
+    justify-content: center;
   }
 
   .log-card {
@@ -1545,8 +1651,14 @@ main {
   }
 
   .menu-group dl div {
-    flex-direction: column;
-    gap: 2px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 10px;
+    row-gap: 2px;
+  }
+
+  .menu-group dd {
+    grid-column: 2;
   }
 
   .menu-group dd {
