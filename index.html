@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch Heart · Film, series and anime diary for Android</title>
+  <meta name="description" content="Watch Heart is a free Android diary for every film, series and anime you watch. Rate in half stars, review, keep a watchlist, import from Letterboxd, IMDb, Trakt and more, and turn each month into an Instagram story.">
+  <meta name="theme-color" content="#0B0A0D">
+  <meta property="og:title" content="Watch Heart">
+  <meta property="og:description" content="Your film, series and anime diary. Free, no ads.">
+  <meta property="og:image" content="https://inigo-code.github.io/watch-heart-site/assets/stories/strip-marquee.webp">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="top">
+
+  <header class="bar">
+    <a class="mark" href="#top" aria-label="Watch Heart, back to top"><img src="assets/icon.png" width="44" height="44" alt=""></a>
+    <nav class="bar-links" aria-label="Sections">
+      <a href="#diary">Diary</a>
+      <a href="#stories">Stories</a>
+      <a href="#import">Import</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <a class="button" href="https://github.com/inigo-code/watch-heart/releases/latest">Download APK</a>
+  </header>
+
+  <!-- The admission ticket. Its lower half runs past the first screen. -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="ticket">
+      <div class="ticket-face">
+        <h1 id="hero-title" class="hero-title"><span>Watch</span><span>Heart</span></h1>
+        <p class="hero-lede">A diary for every film, series and anime you watch. Rate it, review it, and turn each month into an Instagram story.</p>
+        <p class="hero-details">
+          <span>Free for Android</span><i class="diamond" aria-hidden="true"></i><span>No ads, no account needed</span><i class="diamond" aria-hidden="true"></i><span>Admit one</span>
+        </p>
+      </div>
+      <div class="ticket-stub" data-reveal>
+        <figure class="plate"><img src="assets/screens/diary.webp" width="824" height="1784" alt="The Diary: October 2026 as a reel of film, each viewing a ticket stub with poster, stars and a heart"></figure>
+        <figure class="plate plate-raised"><img src="assets/stories/strip-marquee.webp" width="540" height="960" alt="An October recap story: nine posters in a strip of film, 15 hours of screen time, 4.4 stars on average"></figure>
+        <figure class="plate"><img src="assets/screens/pick.webp" width="824" height="1784" alt="Tonight's feature: the watchlist picks Nosferatu, recommended by Sam"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Every viewing, a ticket -->
+  <section id="diary" class="showcase" aria-labelledby="diary-title">
+    <div class="showcase-plate" data-reveal>
+      <img id="showcase-img" src="assets/screens/diary.webp" width="824" height="1784" alt="The Diary as ticket stubs">
+    </div>
+    <div class="showcase-text">
+      <div class="tabs" role="tablist" aria-label="Ways to see your diary">
+        <button role="tab" aria-selected="true" data-img="assets/screens/diary.webp" data-alt="The Diary as ticket stubs">Tickets</button>
+        <button role="tab" aria-selected="false" data-img="assets/screens/wall.webp" data-alt="The Diary as a poster wall">Poster wall</button>
+        <button role="tab" aria-selected="false" data-img="assets/screens/paper.webp" data-alt="The Diary in the light Paper look with the Velvet accent">Paper</button>
+      </div>
+      <div class="showcase-copy" data-reveal>
+        <h2 id="diary-title">Every viewing, a ticket</h2>
+        <p>Log what you watched and when, with half-star ratings, a heart, rewatches and a review. Each month becomes a reel of film, numbered like a projectionist would: October is reel 10.</p>
+      </div>
+      <div class="cells">
+        <a class="cell cell-ink" href="https://github.com/inigo-code/watch-heart/releases/latest">Download for Android</a>
+        <a class="cell cell-tone" href="#stories">See the stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Made for movie nights: sheets that stack like tabbed folders -->
+  <section class="sheets" aria-labelledby="sheets-title">
+    <h2 id="sheets-title" class="sheets-title" data-reveal>Made for movie nights</h2>
+    <article class="sheet sheet-gold">
+      <h3>Find anything you watched</h3>
+      <p>Films, series and anime in one search, with what’s trending this week before you type. Share a link from IMDb, Letterboxd, TMDB or Chrome and it opens ready to log.</p>
+      <img src="assets/screens/find.webp" width="824" height="1784" alt="Find: anime trending this week, from The Apothecary Diaries to Bleach" loading="lazy">
+    </article>
+    <article class="sheet sheet-velvet">
+      <h3>Half stars, real reviews</h3>
+      <p>Slide across the stars to rate, heart the ones you love, mark rewatches, note the season and episodes, and hide spoilers behind a tap.</p>
+      <img src="assets/screens/log.webp" width="824" height="1784" alt="Logging Frieren: watched on a date, five stars, loved, season 1 episodes 1 to 10" loading="lazy">
+    </article>
+    <article class="sheet sheet-neon">
+      <h3>Can’t decide? Spin the reel</h3>
+      <p>Bookmark what you want to watch. When the evening comes and nobody can choose, Pick for me shows tonight’s feature. Logging it takes it off the list.</p>
+      <img src="assets/screens/watchlist.webp" width="824" height="1784" alt="Up Next: the watchlist as a wall of posters with a Pick for me button" loading="lazy">
+    </article>
+    <article class="sheet sheet-paper">
+      <h3>Yours, and only yours</h3>
+      <p>Everything stays on your phone. Lock the app with your fingerprint, back up to a file, and sign in only if you want your diary on another device too.</p>
+      <img src="assets/screens/entry.webp" width="824" height="1784" alt="Past Lives in the diary: watched Saturday, four and a half stars, loved, with a review" loading="lazy">
+    </article>
+  </section>
+
+  <!-- Every month, a story: the live thing -->
+  <section id="stories" class="stories" aria-labelledby="stories-title">
+    <div class="stories-head" data-reveal>
+      <h2 id="stories-title">Every month, a story</h2>
+      <p>Watch Heart lays out your month at Instagram’s story size, ready to share. Pick a layout to see this October in all six palettes.</p>
+      <div class="tabs tabs-light" role="tablist" aria-label="Story layout" id="layout-tabs">
+        <button role="tab" aria-selected="true" data-layout="strip">Film strip</button>
+        <button role="tab" aria-selected="false" data-layout="tickets">Tickets</button>
+        <button role="tab" aria-selected="false" data-layout="spotlight">Spotlight</button>
+      </div>
+    </div>
+    <ul class="tiles" id="story-tiles">
+      <li data-reveal class="tile pair-1"><img data-palette="marquee" src="assets/stories/strip-marquee.webp" width="540" height="960" alt="October story in the Marquee palette" loading="lazy">
+        <div class="tag"><p><span>Marquee</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
+      <li data-reveal class="tile pair-2"><img data-palette="velvet" src="assets/stories/strip-velvet.webp" width="540" height="960" alt="October story in the Velvet palette" loading="lazy">
+        <div class="tag"><p><span>Velvet</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
+      <li data-reveal class="tile pair-3"><img data-palette="neon" src="assets/stories/strip-neon.webp" width="540" height="960" alt="October story in the Neon palette" loading="lazy">
+        <div class="tag"><p><span>Neon</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
+      <li data-reveal class="tile pair-4"><img data-palette="sakura" src="assets/stories/strip-sakura.webp" width="540" height="960" alt="October story in the Sakura palette" loading="lazy">
+        <div class="tag"><p><span>Sakura</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
+      <li data-reveal class="tile pair-2"><img data-palette="noir" src="assets/stories/strip-noir.webp" width="540" height="960" alt="October story in the Noir palette" loading="lazy">
+        <div class="tag"><p><span>Noir</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
+      <li data-reveal class="tile pair-1"><img data-palette="paper" src="assets/stories/strip-paper.webp" width="540" height="960" alt="October story in the Paper palette" loading="lazy">
+        <div class="tag"><p><span>Paper</span><span class="layout-name">Film strip</span><span>9 titles</span><span>15 h</span></p><p><span>Oct 2026</span><span>1080 × 1920</span></p></div></li>
+      <li data-reveal class="tile pair-4"><img src="assets/screens/card.webp" width="824" height="1784" alt="A single review as a story card: Spirited Away, rewatched, five stars" loading="lazy">
+        <div class="tag"><p><span>Story card</span><span>One review</span><span>5 stars</span><span>Velvet</span></p><p><span>17 Oct</span><span>Just watched</span></p></div></li>
+      <li data-reveal class="tile pair-3"><img src="assets/screens/recap.webp" width="824" height="1784" alt="The Recap tab: choose a month, a layout and a palette, then share or save" loading="lazy">
+        <div class="tag"><p><span>Recap tab</span><span>Month or year</span><span>Share</span><span>Save</span></p><p><span>Any month</span><span>2026 wrapped</span></p></div></li>
+    </ul>
+  </section>
+
+  <!-- Bring your history: the programme sheet -->
+  <section id="import" class="programme" aria-labelledby="import-title">
+    <div class="programme-side" data-reveal>
+      <h2 id="import-title">Bring your history</h2>
+      <p>Pick the file your old app exported, as it comes. Watch Heart reads it, adds what’s new and finds every poster on its own.</p>
+      <img src="assets/screens/import.webp" width="824" height="1784" alt="The Import screen: Letterboxd and IMDb files found, ready to add" loading="lazy">
+    </div>
+    <div class="menu-sheet" data-reveal>
+      <h3>Tonight’s programme</h3>
+      <p class="menu-note">Imports from eight apps, all on your phone</p>
+      <div class="menu-group">
+        <h4>Film diaries</h4>
+        <dl>
+          <div><dt>Letterboxd<small>The .zip from Settings → Data</small></dt><dd>Diary, ratings, reviews, likes</dd></div>
+          <div><dt>IMDb<small>Ratings and watchlist exports</small></dt><dd>Ratings, watchlist</dd></div>
+          <div><dt>Trakt<small>Data export, exact matches</small></dt><dd>History, ratings</dd></div>
+          <div><dt>Moviebase<small>Synced through Trakt</small></dt><dd>History, ratings</dd></div>
+        </dl>
+      </div>
+      <div class="menu-group">
+        <h4>Anime</h4>
+        <dl>
+          <div><dt>MyAnimeList<small>The anime list export</small></dt><dd>Completed, watching</dd></div>
+          <div><dt>AniList<small>In MyAnimeList’s format</small></dt><dd>Completed, watching</dd></div>
+        </dl>
+      </div>
+      <div class="menu-group">
+        <h4>Streaming and trackers</h4>
+        <dl>
+          <div><dt>Netflix<small>Viewing activity download</small></dt><dd>Viewing history</dd></div>
+          <div><dt>Refract<small>Settings → Export Data</small></dt><dd>Watched, reviews</dd></div>
+          <div><dt>Serializd, TV Time<small>Any CSV or JSON export</small></dt><dd>Titles, dates</dd></div>
+        </dl>
+      </div>
+      <p class="menu-close">Posters arrive by themselves.<br>Import again any time: nothing doubles.</p>
+    </div>
+  </section>
+
+  <!-- A note from the projection booth -->
+  <section class="letter-wrap" aria-labelledby="letter-title">
+    <article class="letter" data-reveal>
+      <img class="letter-face" src="assets/icon.png" width="44" height="44" alt="">
+      <h2 id="letter-title">A note from Inigo</h2>
+      <p>I wanted one place for everything I watch: the film on Friday, the series I finish on Sunday, the anime I swear is the last episode at 1 am.</p>
+      <p>So Watch Heart keeps every one of them in a single diary, with the dates, the stars and the words. Your diary stays on your phone. There are no ads and nothing to buy, and there won’t be.</p>
+      <p>The part I love most is the end of the month, when the reel turns into a story to share.</p>
+      <p>If something’s missing or broken, write to me. I read everything.</p>
+      <p class="sign">Inigo<span>Maker of Watch Heart and Prompt Heart</span></p>
+      <a class="stub" href="mailto:inigo@tosstheworld.org?subject=Watch%20Heart">inigo@tosstheworld.org</a>
+    </article>
+  </section>
+
+  <!-- Questions, as programme notes -->
+  <section id="questions" class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" data-reveal>Questions</h2>
+    <div class="faq-text" data-reveal>
+      <p><b>Is it free?</b> Yes, completely: no ads, no subscriptions and no paid extras.</p>
+      <p><b>Where is my diary kept?</b> On your phone. If you sign in, a copy is kept in your private account so your devices stay in sync; nobody else can read it.</p>
+      <p><b>Do I need an account?</b> No. Everything works without one. An account only adds backup and sync.</p>
+      <p><b>Where do the titles and posters come from?</b> From TMDB, the free film and TV database, and from TVmaze for series.</p>
+      <p><b>Does it work for anime?</b> Yes. Anime has its own tab, its own colour and studios in the credits, and Japanese animation is recognised automatically.</p>
+      <p><b>How do I post a story to Instagram?</b> Open Recap, choose the month and a look, tap Share to story, then pick Instagram and Story. You can save it to your photos too.</p>
+      <p><b>Can I bring my Letterboxd history?</b> Yes, and IMDb, Trakt, MyAnimeList, Netflix, Refract and more. See the programme above.</p>
+      <p><b>Can I leave and take my diary with me?</b> Any time: export a full backup, a spreadsheet, or a file Letterboxd can import.</p>
+      <p><b>Is it on Google Play or iPhone?</b> It’s an Android app, installed from the APK here for now. Google Play is next.</p>
+      <p><b>How do I delete my account?</b> In the app: Settings, tap your email under Account, then Delete account. There’s also a <a href="delete-account.html">page for it</a>.</p>
+    </div>
+  </section>
+
+  <!-- First step, already open -->
+  <section class="first-step" aria-labelledby="cta-title">
+    <div class="first-step-copy" data-reveal>
+      <h2 id="cta-title">Lights down.<br>Log it.</h2>
+      <p>Install the APK, open Watch Heart and log the last thing you watched. Your first reel starts there.</p>
+    </div>
+    <form class="log-card" data-ui id="log-card" action="https://github.com/inigo-code/watch-heart/releases/latest" method="get" data-reveal>
+      <p class="log-title">What did you watch?</p>
+      <label class="field"><span class="visually-hidden">Title</span><input id="log-input" name="q" value="Past Lives" autocomplete="off"></label>
+      <div class="segmented" role="radiogroup" aria-label="Kind">
+        <button type="button" role="radio" aria-checked="true">Film</button>
+        <button type="button" role="radio" aria-checked="false">Series</button>
+        <button type="button" role="radio" aria-checked="false">Anime</button>
+      </div>
+      <div class="stars" role="radiogroup" aria-label="Your rating">
+        <button type="button" role="radio" aria-checked="false" aria-label="1 star" data-v="1"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
+        <button type="button" role="radio" aria-checked="false" aria-label="2 stars" data-v="2"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
+        <button type="button" role="radio" aria-checked="false" aria-label="3 stars" data-v="3"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
+        <button type="button" role="radio" aria-checked="false" aria-label="4 stars" data-v="4"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
+        <button type="button" role="radio" aria-checked="true" aria-label="5 stars" data-v="5"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.5l-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></svg></button>
+      </div>
+      <a class="log-button" id="log-button" href="https://github.com/inigo-code/watch-heart/releases/latest">Get Watch Heart to log <span id="log-name">Past Lives</span></a>
+    </form>
+  </section>
+
+</main>
+
+<!-- The back of the ticket, revealed as the page lifts away -->
+<footer class="back">
+  <div class="blocks" aria-label="Watch Heart" role="img">
+    <span style="--h:92%" class="b-gold">W</span><span style="--h:74%" class="b-paper">A</span><span style="--h:100%" class="b-velvet">T</span><span style="--h:66%" class="b-neon">C</span><span style="--h:86%" class="b-sakura">H</span><span style="--h:58%" class="b-ground">&nbsp;</span><span style="--h:100%" class="b-gold">H</span><span style="--h:80%" class="b-velvet">E</span><span style="--h:70%" class="b-paper">A</span><span style="--h:94%" class="b-sakura">R</span><span style="--h:76%" class="b-neon">T</span>
+  </div>
+  <div class="back-links">
+    <div><h2>App</h2><a href="https://github.com/inigo-code/watch-heart/releases/latest">Download APK</a><a href="https://github.com/inigo-code/watch-heart">Source on GitHub</a></div>
+    <div><h2>Your data</h2><a href="privacy.html">Privacy policy</a><a href="delete-account.html">Delete your account</a></div>
+    <div><h2>Contact</h2><a href="mailto:inigo@tosstheworld.org?subject=Watch%20Heart">inigo@tosstheworld.org</a><a href="https://github.com/inigo-code">github.com/inigo-code</a></div>
+    <div class="credits">
+      <img src="assets/tmdb-logo.png" width="110" height="14" alt="TMDB">
+      <p>Watch Heart uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB. Series data from TVmaze, CC BY-SA. Posters belong to their owners.</p>
+    </div>
+  </div>
+  <div class="back-last">
+    <p>© 2026 Inigo. Watch Heart is free and has no ads.</p>
+    <a class="button button-small" href="#top">Back to the top</a>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
