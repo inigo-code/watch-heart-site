@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch Heart · Film, series and anime diary for Android</title>
+  <meta name="description" content="Watch Heart is a free Android diary for every film, series and anime you watch. Rate in half stars, review, keep a watchlist, import from Letterboxd, IMDb, Trakt and more, and turn each month into an Instagram story.">
+  <meta name="theme-color" content="#0B0A0D">
+  <meta property="og:title" content="Watch Heart">
+  <meta property="og:description" content="Your film, series and anime diary. Free, no ads.">
+  <meta property="og:image" content="https://inigo-code.github.io/watch-heart-site/assets/stories/strip-marquee.webp">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="heart.css">
+  <link rel="stylesheet" href="theme.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<main id="top">
+
+  <header class="bar wrap">
+    <a class="brand" href="#top" aria-label="Watch Heart, back to top"><img src="assets/icon.png" width="40" height="40" alt="">Watch Heart</a>
+    <nav aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#stories">Stories</a>
+      <a href="#import">Import</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <a class="button button-small" href="#get">Download</a>
+  </header>
+
+  <!-- The headline across the page, then the words beside the diary -->
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <h1 id="hero-title" class="h1" data-reveal>A diary for everything<br> you watch</h1>
+      <div class="hero-side">
+        <p class="lede" data-reveal style="--i:1">Every film, series and anime in one place. Rate it, review it, and turn each month into an Instagram story.</p>
+        <p class="actions" data-reveal style="--i:2">
+          <a class="button" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Download for Android</a>
+          <a class="link" href="fdroid.html">or get it on F-Droid</a>
+        </p>
+        <ul class="facts" data-reveal style="--i:3"><li>Free, no ads</li><li>No account needed</li><li>Films, series and anime</li></ul>
+      </div>
+    </div>
+    <figure class="hero-media"><div class="phone" data-reveal style="--i:2"><img src="assets/screens/diary.webp" width="824" height="1784" alt="The diary: October as a reel of film, each viewing a ticket stub with its poster, stars and a heart" fetchpriority="high"></div></figure>
+  </section>
+
+  <!-- Three things it does, one picture each -->
+  <section id="features" class="section wrap" aria-labelledby="features-title">
+    <div class="head">
+      <h2 id="features-title" class="h2" data-reveal>Made for movie nights</h2>
+      <p data-reveal style="--i:1">Everything between the opening titles and the end credits, and nothing you don’t need.</p>
+    </div>
+    <div class="rows">
+      <article class="row" aria-labelledby="f1">
+        <div class="row-text">
+          <h3 id="f1" class="h3" data-reveal>Log it in seconds</h3>
+          <p data-reveal style="--i:1">Search films, series and anime in one place, or share a link from IMDb, Letterboxd or TMDB. Then slide across the stars.</p>
+          <ul class="ticks" data-reveal style="--i:2">
+            <li>Half stars, a heart and a review</li>
+            <li>Rewatches, seasons and episodes</li>
+            <li>Who you watched it with, and spoilers hidden</li>
+          </ul>
+        </div>
+        <figure class="row-media"><div class="phone" data-reveal><img src="assets/screens/entry.webp" width="824" height="1784" alt="Past Lives in the diary: watched Saturday, four and a half stars, loved, with a one-line review" loading="lazy" decoding="async"></div></figure>
+      </article>
+
+      <article id="stories" class="row" aria-labelledby="f2">
+        <div class="row-text">
+          <h3 id="f2" class="h3" data-reveal>Every month, a story</h3>
+          <p data-reveal style="--i:1">At the end of each month, Watch Heart lays out what you watched at Instagram’s story size. Pick a layout and a palette to see October.</p>
+          <div class="maker" data-reveal style="--i:2">
+            <div class="choice" role="radiogroup" aria-label="Layout" id="layouts">
+              <button type="button" role="radio" aria-checked="true" data-layout="strip">Film strip</button>
+              <button type="button" role="radio" aria-checked="false" data-layout="tickets">Tickets</button>
+              <button type="button" role="radio" aria-checked="false" data-layout="spotlight">Spotlight</button>
+            </div>
+            <div class="swatches" role="radiogroup" aria-label="Palette" id="palettes">
+              <button type="button" role="radio" aria-checked="true" data-palette="marquee" aria-label="Marquee" style="--sw:#F2B84B"></button>
+              <button type="button" role="radio" aria-checked="false" data-palette="velvet" aria-label="Velvet" style="--sw:#FF4D6D"></button>
+              <button type="button" role="radio" aria-checked="false" data-palette="neon" aria-label="Neon" style="--sw:#3DE0F0"></button>
+              <button type="button" role="radio" aria-checked="false" data-palette="sakura" aria-label="Sakura" style="--sw:#FF8FC7"></button>
+              <button type="button" role="radio" aria-checked="false" data-palette="noir" aria-label="Noir" style="--sw:#8A857D"></button>
+              <button type="button" role="radio" aria-checked="false" data-palette="paper" aria-label="Paper" style="--sw:#F3EDE1"></button>
+            </div>
+            <p class="soft" id="story-name" aria-live="polite">Film strip, Marquee</p>
+          </div>
+        </div>
+        <figure class="row-media"><img class="story" id="story-img" src="assets/stories/strip-marquee.webp" width="540" height="960" alt="October as a film-strip story in the Marquee palette: nine posters, 15 hours watched, 4.4 stars on average" loading="lazy" decoding="async" data-reveal></figure>
+      </article>
+
+      <article class="row" aria-labelledby="f3">
+        <div class="row-text">
+          <h3 id="f3" class="h3" data-reveal>Can’t decide? Pick for me</h3>
+          <p data-reveal style="--i:1">Bookmark what you want to watch. When nobody can choose, Pick for me shows tonight’s feature, and logging it takes it off the list.</p>
+          <ul class="ticks" data-reveal style="--i:2">
+            <li>Your watchlist as a wall of posters</li>
+            <li>Who recommended it, kept with the title</li>
+            <li>Where to watch it, from JustWatch</li>
+          </ul>
+        </div>
+        <figure class="row-media"><div class="phone" data-reveal><img src="assets/screens/pick.webp" width="824" height="1784" alt="Tonight’s feature: the watchlist picks Nosferatu, recommended by Sam" loading="lazy" decoding="async"></div></figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- Import: the apps it reads, as a plain list -->
+  <section id="import" class="section wrap" aria-labelledby="import-title">
+    <div class="import">
+      <div class="head">
+        <h2 id="import-title" class="h2" data-reveal>Bring your history</h2>
+        <p data-reveal style="--i:1">Pick the file your old app exported, as it comes. Watch Heart adds what’s new and finds every poster. Import again any time: nothing doubles.</p>
+      </div>
+      <ul class="sources" data-reveal style="--i:1">
+        <li><img src="assets/logos/letterboxd.png" width="32" height="32" alt=""><span><strong>Letterboxd</strong><span>Diary, ratings, reviews, likes</span></span></li>
+        <li><img src="assets/logos/imdb.png" width="32" height="32" alt=""><span><strong>IMDb</strong><span>Ratings and watchlist</span></span></li>
+        <li><img src="assets/logos/trakt.png" width="32" height="32" alt=""><span><strong>Trakt</strong><span>History and ratings</span></span></li>
+        <li><img src="assets/logos/moviebase.png" width="32" height="32" alt=""><span><strong>Moviebase</strong><span>Through Trakt</span></span></li>
+        <li><img src="assets/logos/myanimelist.png" width="32" height="32" alt=""><span><strong>MyAnimeList</strong><span>Completed and watching</span></span></li>
+        <li><img src="assets/logos/anilist.png" width="32" height="32" alt=""><span><strong>AniList</strong><span>In MyAnimeList’s format</span></span></li>
+        <li><img src="assets/logos/netflix.png" width="32" height="32" alt=""><span><strong>Netflix</strong><span>Viewing activity</span></span></li>
+        <li><img src="assets/logos/refract.png" width="32" height="32" alt=""><span><strong>Refract</strong><span>Watched and reviews</span></span></li>
+        <li><img src="assets/logos/serializd.png" width="32" height="32" alt=""><span><strong>Serializd, TV Time</strong><span>Any CSV or JSON export</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The smaller things, as a plain list -->
+  <section class="section wrap" aria-labelledby="more-title">
+    <div class="head"><h2 id="more-title" class="h2" data-reveal>And the small things</h2></div>
+    <dl class="more" data-reveal style="--i:1">
+      <div><dt>Trending first</dt><dd>What’s popular this week, before you type a letter.</dd></div>
+      <div><dt>Anime, properly</dt><dd>Its own tab and colour, studios in the credits, episodes by season.</dd></div>
+      <div><dt>Your profile</dt><dd>A favourite four, a year of watching and how you rate.</dd></div>
+      <div><dt>Movie buddies</dt><dd>Who you watch with most, and achievements to unlock.</dd></div>
+      <div><dt>A card for one review</dt><dd>Share a single film as a story card, stars and all.</dd></div>
+      <div><dt>Projector or Paper</dt><dd>A dark cinema look or a light paper one, in six palettes.</dd></div>
+      <div><dt>App lock</dt><dd>Your fingerprint or screen lock keeps the diary yours.</dd></div>
+      <div><dt>Sync if you want</dt><dd>A free account copies your diary to your other phones.</dd></div>
+      <div><dt>Leave any time</dt><dd>Export a full backup, a spreadsheet, or a Letterboxd file.</dd></div>
+    </dl>
+  </section>
+
+  <!-- Get it -->
+  <section id="get" class="section wrap" aria-labelledby="get-title">
+    <div class="get">
+      <div class="head">
+        <h2 id="get-title" class="h2" data-reveal>Get Watch Heart</h2>
+        <p data-reveal style="--i:1">Free for Android phones. Install it, then log the last thing you watched. Your first reel starts there.</p>
+      </div>
+      <div class="ways">
+        <a class="way way-main" href="fdroid.html" data-reveal><img src="assets/logos/fdroid.png" width="48" height="48" alt=""><span><strong>Get it on F-Droid</strong><span>Updates arrive by themselves</span></span><span class="go">Set up</span></a>
+        <a class="way" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk" data-reveal style="--i:1"><img src="assets/icon.png" width="48" height="48" alt=""><span><strong>Download the APK</strong><span>watch-heart.apk, 52 MB</span></span><span class="go">Download</span></a>
+        <a class="way" href="https://github.com/inigo-code/watch-heart/releases" data-reveal style="--i:2"><span class="way-mark" aria-hidden="true">GH</span><span><strong>Every release on GitHub</strong><span>With its notes, so you can see what changed</span></span><span class="go">Open</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- A note from the maker -->
+  <section class="section wrap" aria-labelledby="note-title">
+    <div class="note">
+      <h2 id="note-title" class="h2" data-reveal>A note from Inigo</h2>
+      <div data-reveal style="--i:1">
+        <div class="copy">
+          <p>I wanted one place for everything I watch: the film on Friday, the series I finish on Sunday, the anime I swear is the last episode at 1 am.</p>
+          <p>Your diary stays on your phone. There are no ads and nothing to buy, and there won’t be. If something’s missing or broken, write to me. I read everything.</p>
+        </div>
+        <p class="actions"><a class="button button-tone" href="mailto:inigo@tosstheworld.org?subject=Watch%20Heart">Write to Inigo</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions -->
+  <section id="questions" class="section wrap" aria-labelledby="faq-title">
+    <div class="faq">
+      <div class="head"><h2 id="faq-title" class="h2" data-reveal>Questions</h2></div>
+      <div class="faq-list" data-reveal style="--i:1">
+        <details name="faq" open><summary>Is it free?</summary><p>Yes, completely: no ads, no subscriptions and no paid extras.</p></details>
+        <details name="faq"><summary>Where is my diary kept?</summary><p>On your phone. If you sign in, a copy is kept in your private account so your devices stay in sync; nobody else can read it.</p></details>
+        <details name="faq"><summary>Do I need an account?</summary><p>No. Everything works without one. An account only adds backup and sync.</p></details>
+        <details name="faq"><summary>Where do the titles and posters come from?</summary><p>From TMDB, the free film and TV database, from AniList for anime, and from TVmaze for series.</p></details>
+        <details name="faq"><summary>How do I post a story to Instagram?</summary><p>Open Recap, choose the month and a look, tap Share to story, then pick Instagram and Story. You can save it to your photos too.</p></details>
+        <details name="faq"><summary>How do updates arrive?</summary><p>Smaller improvements arrive inside the app by themselves. For new versions, F-Droid updates it like any other app; with the APK, download the new one over the old and your diary stays.</p></details>
+        <details name="faq"><summary>How do I delete my account?</summary><p>In the app: Settings, tap your email under Account, then Delete account. There’s also a <a class="link" href="delete-account.html">page for it</a>.</p></details>
+        <details name="faq"><summary>Is it on Google Play or iPhone?</summary><p>It’s an Android app. Install the APK here, or get it with F-Droid. Google Play is next.</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-name" aria-hidden="true">Watch Heart</p>
+    <div class="foot-cols">
+      <nav aria-label="App"><h2>App</h2><a href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Download the APK</a><a href="fdroid.html">Get it with F-Droid</a><a href="https://github.com/inigo-code/watch-heart">Source on GitHub</a></nav>
+      <nav aria-label="Your data"><h2>Your data</h2><a href="privacy.html">Privacy policy</a><a href="delete-account.html">Delete your account</a></nav>
+      <nav aria-label="Also by Inigo"><h2>Also by Inigo</h2><a href="https://inigo-code.github.io/prompt-heart-site/">Prompt Heart</a><a href="https://inigo-code.github.io/">Heart Apps</a></nav>
+      <nav aria-label="Contact"><h2>Contact</h2><a href="mailto:inigo@tosstheworld.org?subject=Watch%20Heart">inigo@tosstheworld.org</a></nav>
+    </div>
+    <div class="credits">
+      <img src="assets/tmdb-logo.png" width="110" height="14" alt="TMDB">
+      <p>Watch Heart uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB. Series data from TVmaze, CC BY-SA. Posters belong to their owners. App logos from Simple Icons (CC0); Watch Heart isn’t affiliated with those apps.</p>
+    </div>
+    <div class="foot-last"><p>© 2026 Inigo. Free, with no ads.</p><a href="#top">Back to the top</a></div>
+  </div>
+</footer>
+
+<script src="heart.js" defer></script>
+<script src="site.js" defer></script>
+</body>
+</html>
