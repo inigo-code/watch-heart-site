@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You're invited · Watch Heart</title>
+  <meta name="description" content="A friend invited you to Watch Heart, the film and series diary.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0B0A0D">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root { --ground: #0b0a0d; --ink: #f5f1e8; --muted: #a89f94; --gold: #f2b84b; --on-gold: #17130a; --line: #2c2730; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--ground); color: var(--ink); font-family: 'DM Sans', system-ui, sans-serif; }
+    main { min-height: 100vh; max-width: 440px; margin: 0 auto; padding: 48px 16px; display: flex; flex-direction: column; justify-content: center; gap: 20px; text-align: center; }
+    img { align-self: center; border-radius: 18px; }
+    h1 { font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: 44px; letter-spacing: 1px; line-height: 1; margin: 0; }
+    p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .code { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 52px; letter-spacing: 4px; color: var(--ink); border: 1.5px solid var(--gold); border-radius: 16px; padding: 12px; user-select: all; overflow-wrap: anywhere; }
+    a.button { display: block; padding: 15px 20px; border-radius: 26px; font-weight: 700; text-decoration: none; background: var(--gold); color: var(--on-gold); }
+    a.quiet { color: var(--ink); background: none; border: 1px solid var(--line); }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main>
+  <img src="assets/icon.png" width="84" height="84" alt="">
+  <h1 id="title">You're invited</h1>
+  <p id="line">A friend wants to add you on Watch Heart, the film and series diary.</p>
+  <div class="code" id="code" hidden></div>
+  <a class="button" id="open" href="index.html" hidden>Open in Watch Heart</a>
+  <a class="button quiet" href="https://github.com/inigo-code/watch-heart/releases/latest/download/watch-heart.apk">Don't have it? Download the app</a>
+  <p id="after" hidden>Once it's installed, open Friends, tap Add, and enter this code.</p>
+</main>
+<script>
+  // Only letters and digits ever reach the page or the app link.
+  var raw = new URLSearchParams(location.search).get('code') || '';
+  var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+  if (code.length === 8) {
+    var show = document.getElementById('code');
+    show.textContent = code.slice(0, 4) + '-' + code.slice(4);
+    show.hidden = false;
+    var open = document.getElementById('open');
+    open.href = 'watchheart://friends?code=' + code;
+    open.hidden = false;
+    document.getElementById('after').hidden = false;
+  } else {
+    document.getElementById('title').textContent = 'Watch Heart';
+    document.getElementById('line').textContent = "This invite link isn't complete. Ask your friend to send it again.";
+  }
+</script>
+</body>
+</html>

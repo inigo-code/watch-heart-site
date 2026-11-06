@@ -1,0 +1,77 @@
+/* Watch Heart: the dark of a cinema, marquee gold for the one action, Bebas Neue on the titles. */
+:root {
+  --bg: #0B0A0D;
+  --surface: #16141A;
+  --surface-2: #221F27;
+  --ink: #EFEDEA;
+  --muted: #B3ACA2;
+  --accent: #F2B84B;
+  --accent-ink: #120F08;
+  --accent-hover: #F6C76E;
+  --field: #F2B84B;
+  --field-ink: #120F08;
+  --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+  --font-text: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-weight: 400;
+  --display-track: 0;
+  --display-case: uppercase;
+  --s-h1: clamp(2.5rem, 0.2rem + 9.4vw, 7.5rem);
+  --s-h2: clamp(2.75rem, 1.6rem + 3.6vw, 5rem);
+  --s-head: clamp(2rem, 1.5rem + 1.4vw, 2.75rem);
+}
+
+.brand { font-size: 1.625rem; letter-spacing: 0.02em; }
+.brand img { border-radius: 10px; }
+.h1 { line-height: 0.9; }
+.h2, .h3 { line-height: 0.95; }
+.way-mark { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--field-ink); color: var(--field); font-weight: 700; }
+
+/* The hero: the title across the page, the words and the diary below it. */
+.hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; }
+.hero .phone { width: min(100%, 320px); }
+.hero-text { gap: 40px; }
+.hero-side { display: grid; gap: 32px; max-width: 34rem; }
+@media (min-width: 961px) {
+  .hero { grid-template-rows: auto auto; row-gap: 0; }
+  .hero-text { display: contents; }
+  .hero h1 { grid-column: 1 / -1; grid-row: 1; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+  .hero-side { grid-column: 1; grid-row: 2; align-self: start; padding-top: clamp(1rem, 3vw, 2.5rem); }
+  .hero-media { grid-column: 2; grid-row: 2; padding-block: clamp(2rem, 4vw, 3.5rem); border-radius: var(--radius); background: var(--surface); }
+}
+
+/* The story maker: one picture, its layout and its palette. */
+.story { width: min(78%, 330px); border-radius: 18px; }
+.maker { display: grid; gap: 18px; }
+.choice { display: flex; flex-wrap: wrap; gap: 8px; }
+.choice button { min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--surface-2); font-weight: 700; transition: background-color 180ms ease, transform 140ms var(--ease-out); }
+.choice button[aria-checked="true"] { background: var(--ink); color: var(--bg); }
+.choice button:active, .swatches button:active { transform: scale(0.94); }
+.swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+.swatches button { width: 44px; height: 44px; border-radius: 50%; background: var(--sw); border: 4px solid var(--bg); transition: transform 140ms var(--ease-out); outline-offset: 2px; }
+.swatches button[aria-checked="true"] { outline: 3px solid var(--ink); }
+.story { transition: opacity 200ms ease; }
+.story.is-swapping { opacity: 0; }
+@media (hover: hover) and (pointer: fine) { .choice button[aria-checked="false"]:hover { background: color-mix(in srgb, var(--surface-2) 70%, var(--ink) 12%); } }
+
+/* Import: the source apps in three columns on a surface. */
+.import { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap); }
+.import .head { margin: 0; align-content: start; }
+.sources { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.sources li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 14px; align-items: center; min-height: 72px; padding: 12px 18px; border-radius: 18px; background: var(--surface); }
+.sources img { width: 32px; height: 32px; border-radius: 8px; }
+.sources strong { display: block; }
+.sources span span { display: block; color: var(--muted); font-size: var(--s-small); }
+
+.credits { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: start; margin-top: 40px; color: var(--muted); font-size: var(--s-small); }
+.credits img { margin-top: 4px; }
+.credits p { max-width: 70ch; }
+
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; gap: 48px; }
+  .import { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 680px) {
+  .hero .phone { width: min(78%, 320px); }
+  .sources { grid-template-columns: 1fr; }
+  .credits { grid-template-columns: 1fr; }
+}
