@@ -64,7 +64,7 @@
 
 .credits { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: start; margin-top: 40px; color: var(--muted); font-size: var(--s-small); }
 .credits img { margin-top: 4px; }
-.credits p { max-width: 70ch; }
+.credits p { max-width: 54ch; }
 
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; gap: 48px; }
