@@ -1,6 +1,7 @@
 /* Watch Heart: the page is the admission ticket. */
 
 :root {
+  color-scheme: dark;
   /* The app's own colours: projector black, screenplay paper, marquee gold and the accent inks. */
   --ground: #0b0a0d;
   --ground-2: #16141a;
