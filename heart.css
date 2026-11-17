@@ -269,3 +269,8 @@ main::before { height: min(1100px, 130vh); background: radial-gradient(60% 70% a
   .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 420px) { .foot-cols { grid-template-columns: 1fr; } }
+
+/* The Google Play mark on download buttons. */
+/* It sits on a small dark disc, so its yellow wedge still shows on the gold button. */
+.play-logo { flex: none; box-sizing: border-box; width: 1.75em; height: 1.75em; margin: 0 0.15em 0 -0.55em; padding: 0.4em 0.38em 0.4em 0.47em; border-radius: 50%; background: #121110; }
+.way img.way-play { padding: 9px; background: #fff; object-fit: contain; }
