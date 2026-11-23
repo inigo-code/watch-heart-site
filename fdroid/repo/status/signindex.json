@@ -1,0 +1,1 @@
+{"commandLine":["fdroid.py signindex"],"endTimestamp":1793130280371,"signed":["repo\\index-v1.json","repo\\entry.json","archive\\index-v1.json","archive\\entry.json"],"startTimestamp":1793110476000,"subcommand":"signindex"}
